@@ -1,6 +1,6 @@
 <template>
     <div class="lm-main-wrapper">
-    <LmMainWrapper/>
+
         <lm-catalog/>
         <lm-cart/>
     </div>
@@ -28,11 +28,11 @@
 
 <style>
     .lm-main-wrapper {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-content: center;
-        max-width: 900px;
+        /*display: flex;*/
+        /*flex-direction: column;*/
+        /*justify-content: center;*/
+        /*align-content: center;*/
+
         margin: 0 auto;
     }
 </style>
