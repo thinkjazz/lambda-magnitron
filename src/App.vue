@@ -1,8 +1,6 @@
 <template>
   <div id="app">
-  <lm-main-wrapper>
-
-  </lm-main-wrapper>
+  <lm-main-wrapper />
   </div>
 </template>
 
@@ -24,6 +22,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 70px;
 }
 </style>
