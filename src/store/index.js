@@ -14,7 +14,8 @@ let store = new Vuex.Store({
         }
     },
     actions: {
-        // async GET_PRODUCT_FROM_API({commit}) {
+        //AXIOS EXAMPLE
+        // GET_PRODUCT_FROM_API({commit}) {
         //     let url = 'http://localhost:3000/products';
         //     return Axios(url, {
         //         method: "GET"
