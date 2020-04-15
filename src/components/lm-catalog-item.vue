@@ -41,6 +41,7 @@
      margin-bottom: $margin*2;
      &__image {
          width: 150px;
+         height: auto;
      }
  }
 </style>

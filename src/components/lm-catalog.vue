@@ -2,11 +2,12 @@
     <div class="lm-catalog">
         <h1>Каталог</h1>
         <div class="lm-catalog__list">
+
         <lm-catalog-item
-                v-for="product in this.$store.state.products"
+                v-for="product in PRODUCTS"
                 :key="product.id"
                 v-bind:product-data="product"
-                @sendArticle="reciveArticle"
+                @sendArticle="getProductId"
         />
         </div>
     </div>
@@ -14,7 +15,7 @@
 
 <script>
 import lmCatalogItem from "./lm-catalog-item";
-import {mapActions} from "vuex";
+import {mapActions, mapGetters} from "vuex";
     export default {
         name: "lm-catalog",
         components: {
@@ -27,18 +28,24 @@ import {mapActions} from "vuex";
             }
         },
 
-        computed: {},
+        computed: {
+            ...mapGetters([
+                'PRODUCTS'
+            ])
+            // this.$store.state.products === PRODUCTS
+        },
         methods:{
             ...mapActions([
                 'GET_PRODUCT_FROM_API'
             ]),
-            reciveArticle(data) {
+            getProductId(data) {
                 return {data}
             },
 
         },
         mounted() {
-            this.GET_PRODUCT_FROM_API()
+            this.GET_PRODUCT_FROM_API();
+
         }
     }
 </script>
