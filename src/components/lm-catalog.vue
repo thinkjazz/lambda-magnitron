@@ -7,7 +7,7 @@
                 v-for="product in PRODUCTS"
                 :key="product.id"
                 v-bind:product-data="product"
-                @sendArticle="getProductId"
+                @addToCart="addToCart"
         />
         </div>
     </div>
@@ -36,11 +36,13 @@ import {mapActions, mapGetters} from "vuex";
         },
         methods:{
             ...mapActions([
-                'GET_PRODUCT_FROM_API'
+                'GET_PRODUCT_FROM_API',
+                'ADD_TO_CART'
             ]),
-            getProductId(data) {
-                return {data}
-            },
+            addToCart(data) {
+               this.ADD_TO_CART(data)
+
+            }
 
         },
         mounted() {

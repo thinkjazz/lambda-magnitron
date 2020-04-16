@@ -6,7 +6,7 @@
         <p class="lm-catalog-item__name">{{productData.name}}</p>
         <p class="lm-catalog-item__price">{{productData.price.toFixed()}} ₽</p>
         <button class="lm-catalog-item__add-to-cart-btn btn"
-                @click="sendDataToParent">Add to cart</button>
+                @click="addToCart">Add to cart</button>
     </div>
 </template>
 
@@ -26,8 +26,8 @@
         },
         computed: {},
         methods: {
-            sendDataToParent() {
-                this.$emit('sendArticle', this.productData.article)
+            addToCart(){
+                this.$emit('addToCart', this.productData)
             }
         }
     }
